@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spot the Seven — Harbor &amp; Village</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="brand">SPOT THE SEVEN</div>
+    <div class="level-name" id="levelName">Harbor at Sunset</div>
+    <div class="stat"><span class="label">Found</span><span id="foundCount">0 / 7</span></div>
+    <div class="stat"><span class="label">Remain</span><span id="remainCount">7</span></div>
+    <div class="stat"><span class="label">Time</span><span id="timeLeft">2:30</span></div>
+    <div class="stat"><span class="label">Score</span><span id="score">0</span></div>
+    <button id="hintBtn" type="button" title="Hint (H)">💡 Hint <span id="hintsLeft">3</span></button>
+    <button id="muteBtn" type="button" title="Sound (M)">🔊</button>
+  </header>
+  <div id="timerBar"><div id="timerFill"></div></div>
+  <main id="boards">
+    <figure class="panel" id="panelA">
+      <img id="imgA" src="./assets/level1-a.jpg" alt="Original scene" draggable="false">
+      <div class="markers" id="markersA"></div>
+      <figcaption>Picture A</figcaption>
+    </figure>
+    <figure class="panel" id="panelB">
+      <img id="imgB" src="./assets/level1-b.jpg" alt="Changed scene" draggable="false">
+      <div class="markers" id="markersB"></div>
+      <figcaption>Picture B</figcaption>
+    </figure>
+  </main>
+  <footer id="foot">
+    <span id="message">Find all 7 differences. Click on either picture — a right spot rings on both.</span>
+    <span class="keys">H hint · M sound · R restart level</span>
+  </footer>
+  <div id="overlay" class="hidden">
+    <div id="overlayCard">
+      <h2 id="overlayTitle"></h2>
+      <p id="overlayText"></p>
+      <div id="overlayScore"></div>
+      <button id="overlayBtn" type="button"></button>
+    </div>
+  </div>
+  <p id="status" role="status" aria-live="polite"></p>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
